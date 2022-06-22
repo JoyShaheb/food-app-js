@@ -1,3 +1,4 @@
+import { loaderFunction, errorLoaderFunction } from "./loaderFunction.mjs";
 let form = document.getElementById("form");
 let searchBar = document.getElementById("search-bar");
 
