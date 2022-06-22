@@ -12,3 +12,13 @@ nav a {
   text-decoration: none;
   color: white !important;
 }
+
+/**
+* ! Style rules for Form component 
+**/
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
