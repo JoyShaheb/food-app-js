@@ -13,13 +13,11 @@ export let cardComponent = (data) => {
       <img src=${
         image
           ? image
-          : "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nlhll2445zs74vwrv52u.png"
+          : "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rqxf0714ejt6odlln3no.png"
       } class="card-img-top" alt="...">
   
       <div class="card-body">
         <h5 class="card-title">${label}</h5>
-        <p class="card-text"></p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
   
       </div>
