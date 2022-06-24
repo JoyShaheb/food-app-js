@@ -6,7 +6,7 @@ export let submitForm = (input, fetchData, clear) => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     let data = await fetchData(input());
-    cardComponent(data?.hints);
+    cardComponent(data);
     clear();
   });
 };
