@@ -1,4 +1,5 @@
 let cardContainer = document.getElementById("card-container");
+
 export let cardComponent = (data) => {
   cardContainer.innerHTML = "";
   console.log(data);
