@@ -13,6 +13,10 @@ nav a {
   color: white !important;
 }
 
+.navbar-toggler {
+  color: white;
+}
+
 /**
 * ! Style rules for Form component 
 **/
