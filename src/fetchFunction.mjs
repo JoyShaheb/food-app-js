@@ -18,7 +18,7 @@ export let fetchFunction = async (search) => {
     })
     .then((res) => {
       if (res.parsed.length !== 0) {
-        results.innerHTML = "results are here";
+        loader.innerHTML = `results for ${search}`;
         return res;
       } else {
         throw new Error("No Recipes Found");

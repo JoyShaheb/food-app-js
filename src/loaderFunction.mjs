@@ -1,6 +1,6 @@
-let results = document.getElementById("results");
+let loader = document.getElementById("loader");
 export let loaderFunction = () =>
-  (results.innerHTML = "<h3 class='text-center'>Loading, Please wait....</h3>");
+  (loader.innerHTML = "<h3 class='text-center'>Loading, Please wait....</h3>");
 
 export let errorLoaderFunction = () =>
-  (results.innerHTML = "<h3 class='text-center'>Sorry, No Result Found</h3>");
+  (loader.innerHTML = "<h3 class='text-center'>Sorry, No Result Found</h3>");
