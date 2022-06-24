@@ -1,13 +1,19 @@
 let cardContainer = document.getElementById("card-container");
+let buttons = document.getElementById("next-prev-buttons");
 
 export let cardComponent = (data) => {
   cardContainer.innerHTML = "";
+  buttons.innerHTML = "";
   console.log(data);
   let { hints, parsed, text, _links } = data;
 
   if (hints === undefined) return;
   else {
-    return (cardContainer.innerHTML = hints
+    buttons.innerHTML = `
+      <button class="btn btn-dark">Prev</button>
+      <button class="btn btn-dark">Next</button>
+    `;
+    cardContainer.innerHTML = hints
       ?.map((x) => {
         let { food, measures } = x;
         let { category, categoryLabel, foodId, image, label } = food;
@@ -24,6 +30,6 @@ export let cardComponent = (data) => {
       </div>
   `;
       })
-      .join(""));
+      .join("");
   }
 };
