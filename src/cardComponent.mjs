@@ -1,5 +1,6 @@
 let cardContainer = document.getElementById("card-container");
 let buttons = document.getElementById("next-prev-buttons");
+import { nextFunction } from "./nextFunction.mjs";
 
 export let cardComponent = (data) => {
   cardContainer.innerHTML = "";
@@ -9,10 +10,7 @@ export let cardComponent = (data) => {
 
   if (hints === undefined) return;
   else {
-    buttons.innerHTML = `
-      <button class="btn btn-dark">Prev</button>
-      <button class="btn btn-dark">Next</button>
-    `;
+    nextFunction(_links);
     cardContainer.innerHTML = hints
       ?.map((x) => {
         let { food, measures } = x;
