@@ -1,10 +1,12 @@
 let cardContainer = document.getElementById("card-container");
 export let cardComponent = (data) => {
+  cardContainer.innerHTML = "";
   console.log(data);
+  let { hints, parsed, text, _links } = data;
 
-  if (data === undefined) return;
+  if (hints === undefined) return;
   else {
-    return (cardContainer.innerHTML = data
+    return (cardContainer.innerHTML = hints
       ?.map((x) => {
         let { food, measures } = x;
         let { category, categoryLabel, foodId, image, label } = food;
