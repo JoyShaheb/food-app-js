@@ -1,12 +1,12 @@
-import { loaderFunction, errorLoaderFunction } from "./loaderFunction.mjs";
+import { cardComponent } from "./cardComponent.mjs";
 let form = document.getElementById("form");
 let searchBar = document.getElementById("search-bar");
 
 export let submitForm = (input, fetchData, clear) => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    let x = await fetchData(input());
-    console.log(x);
+    let data = await fetchData(input());
+    cardComponent(data?.hints);
     clear();
   });
 };
