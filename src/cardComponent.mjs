@@ -11,17 +11,15 @@ export let cardComponent = (data) => {
         let { food, measures } = x;
         let { category, categoryLabel, foodId, image, label } = food;
         return `
-      <div class="card">
-      <img src=${
-        image
-          ? image
-          : "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rqxf0714ejt6odlln3no.png"
-      } class="card-img-top" alt="...">
-  
-      <div class="card-body">
-        <h5 class="card-title">${label}</h5>
-      </div>
-  
+      <div id=${foodId} class="card">
+        <img src=${
+          image
+            ? image
+            : "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rqxf0714ejt6odlln3no.png"
+        } class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">${label}</h5>
+        </div>
       </div>
   `;
       })
